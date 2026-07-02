@@ -21,7 +21,6 @@ const Seccion = styled.footer`
   gap: 0.5rem;
   justify-items: center;
   padding: 1rem;
-  border-top: 1px solid gray;
 `;
 
 const Copyright = styled.p``;

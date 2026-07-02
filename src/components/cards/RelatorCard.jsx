@@ -34,12 +34,13 @@ const Container = styled.article`
   position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   gap: 1rem;
+
   grid-template-areas:
     "imagen nombre"
     "imagen stats"
     "imagen contactos";
-  grid-template-rows: auto 1fr auto;
 
   @media (max-width: 480px) {
     justify-self: center;
@@ -65,6 +66,7 @@ const Contactos = styled.div`
     align-self: end;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
+    justify-self: right;
   }
 `;
 

@@ -64,5 +64,5 @@ const Dots = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 `;

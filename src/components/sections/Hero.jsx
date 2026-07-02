@@ -5,7 +5,9 @@ import { css } from "@emotion/react";
 import { PrimarioBg } from "../background/PrimarioBg";
 import Seccion from "../shared/Seccion";
 import { TituloCard } from "../ui/TituloCard";
-export default function Hero({ data, hero }) {
+import { HeroImg } from "../img/HeroImg";
+import { ImgFotografia } from "../img/FotografiaImg";
+export default function Hero({ data, hero, cards }) {
   return (
     <Seccion>
       <PrimarioBg />
@@ -14,17 +16,27 @@ export default function Hero({ data, hero }) {
           <Title>{data.title}</Title>
           <Year>{data.year}</Year>
 
+          <TituloCard>{data.highlight}</TituloCard>
           <Tags>
             {data.tags.map((tag, i) => (
               <Tag key={i}>{tag}</Tag>
             ))}
           </Tags>
-          <TituloCard>{data.highlight}</TituloCard>
+          <TituloCard>Relatores USACH</TituloCard>
+
+          <Relatores>
+            {cards.map((item, i) => (
+              <FotografiaWrapper>
+                <ImgFotografia key={i} src={`img/${item.image}`} />
+              </FotografiaWrapper>
+            ))}
+          </Relatores>
 
           <Cta href={data.cta.href}>{data.cta.label}</Cta>
         </Info>
-
-        <Imagen src={hero} alt={data.image.alt} />
+        <ImagenWrapper>
+          <HeroImg />
+        </ImagenWrapper>
       </Limitador>
     </Seccion>
   );
@@ -48,6 +60,7 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transform: scale(1.2);
 `;
 
 //------------------------hojas
@@ -59,6 +72,10 @@ const ctaBase = css`
   border-radius: ${theme.spacing(6)};
   border: 1px solid ${theme.colors.texto};
   font-weight: bold;
+`;
+const Relatores = styled.div`
+  display: flex;
+  gap: 0.5rem;
 `;
 
 const Year = styled.p`
@@ -85,15 +102,15 @@ const Cta = styled.a`
   background: ${theme.colors.enfasis};
 `;
 
-const Imagen = styled.img`
-  width: 100%;
-  max-width: 480px;
-  object-fit: contain;
-
-  filter: none;
-  transform: none;
-
-  @media (max-width: 760px) {
+const ImagenWrapper = styled.div`
+  transform: scale(1.3);
+  @media (max-width: 980px) {
     display: none;
   }
+`;
+const FotografiaWrapper = styled.div`
+  width: 3rem;
+
+  border-radius: 0.5rem;
+  overflow: hidden;
 `;

@@ -11,7 +11,6 @@ import Seccion from "../shared/Seccion";
 export default function Pilares({ titulo, cards = [] }) {
   return (
     <Seccion id="pilares">
-      <TileBg />
       <TituloSeccion>{titulo}</TituloSeccion>
       <Holder>
         {cards.map((card, index) => (
