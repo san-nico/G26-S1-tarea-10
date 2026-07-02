@@ -4,6 +4,6 @@ export const ImgFotografia = styled.img`
   aspect-ratio: 12/16;
   object-fit: cover;
   border-radius: 5%;
-  grid-area: imagen;
+
   width: 100%;
 `;

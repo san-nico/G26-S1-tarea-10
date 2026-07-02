@@ -60,7 +60,7 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transform: scale(1.2);
+  transform: scale(1.05);
 `;
 
 //------------------------hojas
@@ -104,7 +104,7 @@ const Cta = styled.a`
 
 const ImagenWrapper = styled.div`
   transform: scale(1.3);
-  @media (max-width: 980px) {
+  @media (max-width: 1150px) {
     display: none;
   }
 `;

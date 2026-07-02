@@ -7,7 +7,9 @@ import { ImgIcono } from "../img/IconoImg";
 export function RelatorCard({ card }) {
   return (
     <Container>
-      <ImgFotografia src={`img/${card.image}`} alt={card.name} />
+      <ImagenWrapper>
+        <ImgFotografia src={`img/${card.image}`} alt={card.name} />
+      </ImagenWrapper>
 
       <TituloCard>{card.name}</TituloCard>
 
@@ -81,3 +83,7 @@ const Bio = styled.ul`
 `;
 
 const Cv = styled.li``;
+const ImagenWrapper = styled.div`
+  width: 16rem;
+  grid-area: imagen;
+`;
