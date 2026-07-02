@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import { TituloSeccion } from "./TituloSeccion";
-import StackCard from "./StackCard";
-import { theme } from "../styles/theme";
 
-export default function StackSeccion({ title, cards }) {
+import { useEffect, useState } from "react";
+
+import { StackCard } from "../cards/StackCard";
+import { theme } from "../../styles/theme";
+import { TituloSeccion } from "../ui/TituloSeccion";
+import Seccion from "../shared/Seccion";
+import { Dot } from "../ui/Dot";
+import { PrimarioBg } from "../background/PrimarioBg";
+
+export default function StackSeccion({ titulo, cards }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -17,12 +22,16 @@ export default function StackSeccion({ title, cards }) {
 
   return (
     <Seccion id="stack">
-      <TituloSeccion>{title}</TituloSeccion>
-
+      <PrimarioBg />
+      <TituloSeccion>{titulo}</TituloSeccion>
       <Holder>
         {cards.map((item, i) => (
           <CardWrapper key={i} $active={i === activeIndex}>
-            <StackCard card={item} />
+            <StackCard
+              name={item.name}
+              image={item.image}
+              description={item.description}
+            />
           </CardWrapper>
         ))}
       </Holder>
@@ -35,11 +44,6 @@ export default function StackSeccion({ title, cards }) {
     </Seccion>
   );
 }
-
-const Seccion = styled.section`
-  background: ${theme.background.primario};
-  border-block: ${theme.border.seccion};
-`;
 
 const Holder = styled.div`
   display: grid;
@@ -56,21 +60,9 @@ const CardWrapper = styled.div`
 `;
 
 const Dots = styled.div`
-  transform: scale(1.5);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
-`;
-
-const Dot = styled.div`
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: ${(props) =>
-    props.$active ? theme.colors?.primary || "#2563eb" : "#cbd5e1"};
-
-  transition: all 0.3s ease;
-  transform: ${(props) => (props.$active ? "scale(1.2)" : "scale(1)")};
+  margin-top: 2rem;
 `;

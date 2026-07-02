@@ -1,18 +1,20 @@
 import styled from "@emotion/styled";
-import CardPilares from "./PilaresCard";
-import fondo from "../assets/fondo.png";
+import { PilarCard } from "../cards/PilarCard";
 
-import { theme } from "../styles/theme";
-import { bgPuntos } from "../styles/backgrounds";
-import { TituloSeccion } from "./TituloSeccion";
+import { theme } from "../../styles/theme";
+import { TituloSeccion } from "../ui/TituloSeccion";
+
+import { SecundarioBg } from "../background/SecundarioBg";
+import { TileBg } from "../background/TileBg";
+import Seccion from "../shared/Seccion";
 
 export default function Pilares({ titulo, cards = [] }) {
   return (
-    <Contenedor id="pilares">
+    <Seccion id="pilares">
       <TituloSeccion>{titulo}</TituloSeccion>
       <Holder>
         {cards.map((card, index) => (
-          <CardPilares
+          <PilarCard
             key={index}
             title={card.title}
             image={card.image}
@@ -20,33 +22,17 @@ export default function Pilares({ titulo, cards = [] }) {
           />
         ))}
       </Holder>
-    </Contenedor>
+    </Seccion>
   );
 }
-
-const Contenedor = styled.section`
-  padding: ${theme.padding.seccion};
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  ${bgPuntos};
-`;
-
-const Titulo = styled.h1`
-  color: #ffffff;
-
-  span {
-    color: #00ff7b;
-  }
-`;
 
 const Holder = styled.div`
   width: ${theme.breakpoints.maximo};
   justify-content: center;
   display: grid;
   gap: 1.5rem;
+  justify-self: center;
+  margin: auto;
 
   grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem));
 `;

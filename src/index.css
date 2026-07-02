@@ -2,6 +2,7 @@ body {
   color: white;
   font-family: Raleway, Arial, sans-serif;
   font-size: 16px;
+  position: relative;
 }
 h1 {
   font-size: 2.5rem;
@@ -20,7 +21,4 @@ p {
 }
 ul {
   list-style-type: none;
-}
-section {
-  padding: 4rem 1rem;
 }
