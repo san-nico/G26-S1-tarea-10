@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
-import { ImgCircular } from "../img/CircularImg";
+import { CircularImg } from "../img/CircularImg";
 
 export function StackCard({ name, image, description }) {
   return (
     <Card>
       <Titulo>{name}</Titulo>
-      <ImgCircular src={`img/${image}`} />
+      <CircularImg src={`img/${image}`} />
       <Descripcion>{description}</Descripcion>
     </Card>
   );

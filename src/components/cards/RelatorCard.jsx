@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 
 import { TituloCard } from "../ui/TituloCard";
-import { ImgFotografia } from "../img/FotografiaImg";
-import { ImgIcono } from "../img/IconoImg";
+import { FotografiaImg } from "../img/FotografiaImg";
+import { IconoImg } from "../img/IconoImg";
 
 export function RelatorCard({ card }) {
   return (
     <Container>
       <ImagenWrapper>
-        <ImgFotografia src={`img/${card.image}`} alt={card.name} />
+        <FotografiaImg src={`img/${card.image}`} alt={card.name} />
       </ImagenWrapper>
 
       <TituloCard>{card.name}</TituloCard>
@@ -21,7 +21,7 @@ export function RelatorCard({ card }) {
 
       <Contactos>
         {card.contacto.map((item, index) => (
-          <ImgIcono
+          <IconoImg
             key={`${item.tipo}-${index}`}
             src={`img/rrss_${item.tipo}.png`}
             href={item.enlace}

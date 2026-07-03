@@ -6,7 +6,7 @@ import { PrimarioBg } from "../background/PrimarioBg";
 import Seccion from "../shared/Seccion";
 import { TituloCard } from "../ui/TituloCard";
 import { HeroImg } from "../img/HeroImg";
-import { ImgFotografia } from "../img/FotografiaImg";
+import { FotografiaImg } from "../img/FotografiaImg";
 export default function Hero({ data, hero, cards }) {
   return (
     <Seccion>
@@ -27,7 +27,7 @@ export default function Hero({ data, hero, cards }) {
           <Relatores>
             {cards.map((item, i) => (
               <FotografiaWrapper>
-                <ImgFotografia key={i} src={`img/${item.image}`} />
+                <FotografiaImg key={i} src={`img/${item.image}`} />
               </FotografiaWrapper>
             ))}
           </Relatores>

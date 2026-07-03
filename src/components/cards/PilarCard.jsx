@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
 import { TituloCard } from "../ui/TituloCard";
-import { ImgSmall } from "../img/SmallImg";
+import { SmallImg } from "../img/SmallImg";
 
 export function PilarCard({ title, image, text = [] }) {
   return (
     <Contenedor>
       <TituloCard>{title}</TituloCard>
-      <ImgSmall src={`img/${image}`} alt={title} />
+      <SmallImg src={`img/${image}`} alt={title} />
 
       <Textos>
         {text.map((linea, index) => (

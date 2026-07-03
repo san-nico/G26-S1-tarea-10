@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
 
-export const ImgSmall = styled.img`
+export const SmallImg = styled.img`
   width: 4rem;
 `;

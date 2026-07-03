@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const ImgCircular = styled.img`
+export const CircularImg = styled.img`
   border-radius: 100%;
   grid-area: imagen;
 
