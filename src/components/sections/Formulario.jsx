@@ -6,7 +6,7 @@ import { PrimarioBg } from "../background/PrimarioBg";
 
 export function Formulario() {
   return (
-    <Seccion>
+    <Seccion id="inscripcion">
       <PrimarioBg />
       <TituloSeccion>Inscríbete con nosotros</TituloSeccion>
       <Contenedor>

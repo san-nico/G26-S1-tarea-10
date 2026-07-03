@@ -1,10 +1,23 @@
 import styled from "@emotion/styled";
 
-export const CircularImg = styled.img`
-  border-radius: 100%;
-  grid-area: imagen;
+export function CircularImg(props) {
+  return (
+    <Contenedor>
+      <Imagen {...props} />
+    </Contenedor>
+  );
+}
 
-  height: 8rem;
-  width: 8rem;
-  border: 4px white solid;
+export const Contenedor = styled.div`
+  display: grid;
+  background: white;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+`;
+export const Imagen = styled.img`
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 95%;
 `;

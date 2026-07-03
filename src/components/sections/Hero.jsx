@@ -7,16 +7,19 @@ import Seccion from "../shared/Seccion";
 import { TituloCard } from "../ui/TituloCard";
 import { HeroImg } from "../img/HeroImg";
 import { FotografiaImg } from "../img/FotografiaImg";
-export default function Hero({ data, hero, cards }) {
+import { CircularImg } from "../img/CircularImg";
+import { HeroBg } from "../background/HeroBg";
+export default function Hero({ data, hero, relatores, stack }) {
   return (
     <Seccion>
-      <PrimarioBg />
+      <HeroBg />
       <Limitador>
         <Info>
           <Title>{data.title}</Title>
           <Year>{data.year}</Year>
 
           <TituloCard>{data.highlight}</TituloCard>
+
           <Tags>
             {data.tags.map((tag, i) => (
               <Tag key={i}>{tag}</Tag>
@@ -24,19 +27,26 @@ export default function Hero({ data, hero, cards }) {
           </Tags>
           <TituloCard>Relatores USACH</TituloCard>
 
-          <Relatores>
-            {cards.map((item, i) => (
+          <Fila>
+            {relatores.map((item, i) => (
               <FotografiaWrapper>
                 <FotografiaImg key={i} src={`img/${item.image}`} />
               </FotografiaWrapper>
             ))}
-          </Relatores>
+          </Fila>
+
+          <TituloCard>Stack tecnológico</TituloCard>
+          <Fila>
+            {stack.map((item, i) => (
+              <StackWrapper>
+                <CircularImg key={i} src={`img/${item.image}`} />
+              </StackWrapper>
+            ))}
+          </Fila>
 
           <Cta href={data.cta.href}>{data.cta.label}</Cta>
         </Info>
-        <ImagenWrapper>
-          <HeroImg />
-        </ImagenWrapper>
+        <ImagenWrapper></ImagenWrapper>
       </Limitador>
     </Seccion>
   );
@@ -46,13 +56,16 @@ const Limitador = styled.div`
   display: grid;
 
   justify-self: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 2rem;
 
-  width: ${theme.breakpoints.maximo};
   grid-template-columns: auto auto;
-  align-items: center;
 
-  gap: 1rem;
+  width: min(100%, 1200px);
+  @media (max-width: 830px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 `;
 
 const Info = styled.div`
@@ -60,7 +73,9 @@ const Info = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transform: scale(1.05);
+  background: ${theme.background.primario};
+  padding: 2rem;
+  border-radius: 1rem;
 `;
 
 //------------------------hojas
@@ -73,18 +88,17 @@ const ctaBase = css`
   border: 1px solid ${theme.colors.texto};
   font-weight: bold;
 `;
-const Relatores = styled.div`
+const Fila = styled.div`
   display: flex;
   gap: 0.5rem;
+  @media (max-width: 376px) {
+    gap: 0.1rem;
+  }
 `;
 
 const Year = styled.p`
   ${ctaBase};
   background: ${theme.colors.secundario};
-`;
-
-const Highlight = styled.h2`
-  color: ${theme.colors.primario};
 `;
 
 const Tags = styled.ul`
@@ -103,14 +117,17 @@ const Cta = styled.a`
 `;
 
 const ImagenWrapper = styled.div`
-  transform: scale(1.3);
-  @media (max-width: 1150px) {
+  @media (max-width: 830px) {
     display: none;
   }
 `;
 const FotografiaWrapper = styled.div`
   width: 3rem;
+  object-fit: cover;
 
   border-radius: 0.5rem;
   overflow: hidden;
+`;
+const StackWrapper = styled.div`
+  width: 3rem;
 `;

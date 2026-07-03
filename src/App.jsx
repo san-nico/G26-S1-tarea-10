@@ -26,7 +26,8 @@ function App() {
       <Hero
         data={contenido.hero}
         hero={hero}
-        cards={contenido.relatores.cards}
+        relatores={contenido.relatores.cards}
+        stack={contenido.stack.cards}
       />
       <Divisor />
       <Pilares

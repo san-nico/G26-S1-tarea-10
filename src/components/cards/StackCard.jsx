@@ -7,12 +7,16 @@ export function StackCard({ name, image, description }) {
   return (
     <Card>
       <Titulo>{name}</Titulo>
-      <CircularImg src={`img/${image}`} />
+      <ImageWrapper>
+        <CircularImg src={`img/${image}`} />
+      </ImageWrapper>
       <Descripcion>{description}</Descripcion>
     </Card>
   );
 }
-
+const ImageWrapper = styled.div`
+  grid-area: imagen;
+`;
 const Card = styled.div`
   display: grid;
   transform: scale(1.5);
@@ -25,13 +29,15 @@ const Card = styled.div`
 
   padding: ${theme.padding.seccion};
 
-  @media (max-width: 600px) {
+  @media (max-width: 770px) {
     grid-template-areas:
       "imagen"
       "titulo"
       "descripcion";
     justify-items: center !important;
     grid-template-columns: 1fr;
+    gap: 0.5rem;
+    transform: scale(1);
   }
 `;
 
