@@ -5,7 +5,7 @@ Presenta información del curso en, tecnologías utilizadas, pilares del taller 
 
 ## Demo
 
-🌐 https://g26-s1-tarea-10-otbgks8gd-sannico.vercel.app
+🌐 g26-s1-tarea-10-zeta.vercel.app
 
 ## Tecnologías
 
