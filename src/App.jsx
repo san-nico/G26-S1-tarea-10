@@ -1,6 +1,3 @@
-import logo from "./assets/logo.png";
-import hero from "./assets/hero-bg.jpg";
-
 import "./reset.css";
 
 import contenido from "./data/contenido.json";
@@ -19,12 +16,11 @@ function App() {
   return (
     <>
       <TileBg />
-      <Navbar logo={logo.src} nav={contenido.header.nav} />
+      <Navbar logo={"/assets/logo.png"} nav={contenido.header.nav} />
       <Divisor />
 
       <Hero
         data={contenido.hero}
-        hero={hero.src}
         relatores={contenido.relatores.cards}
         stack={contenido.stack.cards}
       />

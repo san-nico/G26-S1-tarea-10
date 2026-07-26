@@ -1,12 +1,12 @@
 import Seccion from "../shared/Seccion";
 import { TituloCard } from "../ui/TituloCard";
-import { HeroImg } from "../img/HeroImg";
+
 import { FotografiaImg } from "../img/FotografiaImg";
 import { CircularImg } from "../img/CircularImg";
 import { HeroBg } from "../background/HeroBg";
 import styles from "./sections.module.css";
 
-export default function Hero({ data, hero, relatores, stack }) {
+export default function Hero({ data, relatores, stack }) {
   return (
     <Seccion>
       <HeroBg />
