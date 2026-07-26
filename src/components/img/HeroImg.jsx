@@ -1,15 +1,6 @@
-import styled from "@emotion/styled";
 import fondo from "../../assets/hero-bg.jpg";
-import { theme } from "../../styles/theme";
+import styles from "./images.module.css";
 
-export function HeroImg() {
-  return <Imagen src={fondo} />;
+export function HeroImg({ src }) {
+  return <img className={styles.heroImage} src={src || fondo} alt="hero" />;
 }
-
-const Imagen = styled.img`
-  height: 100%;
-  width: 100%;
-  object-position: right;
-  object-fit: cover;
-  border-radius: 1rem;
-`;

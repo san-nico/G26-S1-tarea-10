@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
+import styles from "./images.module.css";
 
-export const SmallImg = styled.img`
-  width: 4rem;
-`;
+export function SmallImg(props) {
+  return <img className={styles.small} {...props} />;
+}

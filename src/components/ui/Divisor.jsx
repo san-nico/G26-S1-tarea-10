@@ -1,10 +1,5 @@
-import styled from "@emotion/styled";
+import styles from "./ui.module.css";
 
-const centro = "gray";
-const extremo = "black";
-
-export const Divisor = styled.div`
-  height: 2px;
-
-  background: linear-gradient(90deg, ${extremo}, ${centro}, ${extremo});
-`;
+export function Divisor() {
+  return <div className={styles.divider} />;
+}

@@ -1,9 +1,6 @@
-import styled from "@emotion/styled";
-import fondo from "../../assets/fondo.png";
 import { BaseBg } from "./BaseBg";
+import styles from "./background.module.css";
 
-export const TileBg = styled(BaseBg)`
-  background: url(${fondo});
-  background-size: 20rem;
-  background-position: center;
-`;
+export function TileBg(props) {
+  return <BaseBg className={styles.tile} {...props} />;
+}

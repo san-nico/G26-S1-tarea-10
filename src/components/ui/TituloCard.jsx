@@ -1,6 +1,5 @@
-import styled from "@emotion/styled";
-import { theme } from "../../styles/theme";
+import styles from "./ui.module.css";
 
-export const TituloCard = styled.h3`
-  color: ${theme.colors.primario};
-`;
+export function TituloCard({ children }) {
+  return <h3 className={styles.titleCard}>{children}</h3>;
+}

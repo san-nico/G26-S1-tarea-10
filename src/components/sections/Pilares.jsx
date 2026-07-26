@@ -1,18 +1,13 @@
-import styled from "@emotion/styled";
 import { PilarCard } from "../cards/PilarCard";
-
-import { theme } from "../../styles/theme";
 import { TituloSeccion } from "../ui/TituloSeccion";
-
-import { SecundarioBg } from "../background/SecundarioBg";
-import { TileBg } from "../background/TileBg";
 import Seccion from "../shared/Seccion";
+import styles from "./sections.module.css";
 
 export default function Pilares({ titulo, cards = [] }) {
   return (
     <Seccion id="pilares">
       <TituloSeccion>{titulo}</TituloSeccion>
-      <Holder>
+      <div className={styles.holder}>
         {cards.map((card, index) => (
           <PilarCard
             key={index}
@@ -21,18 +16,7 @@ export default function Pilares({ titulo, cards = [] }) {
             text={card.text}
           />
         ))}
-      </Holder>
+      </div>
     </Seccion>
   );
 }
-
-const Holder = styled.div`
-  width: ${theme.breakpoints.maximo};
-  justify-content: center;
-  display: grid;
-  gap: 1.5rem;
-  justify-self: center;
-  margin: auto;
-
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem));
-`;

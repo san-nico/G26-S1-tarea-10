@@ -1,31 +1,20 @@
-import styled from "styled-components";
-import { theme } from "../../styles/theme";
 import { SecundarioBg } from "../background/SecundarioBg";
+import styles from "./layout.module.css";
 
 export default function Footer({ data }) {
   return (
-    <Seccion>
+    <footer className={styles.footerSection}>
       <SecundarioBg />
-      <Copyright>{data.copyright}</Copyright>
+      <p>{data.copyright}</p>
 
-      <Enlace href={data.privacy.url} target="_blank" rel="noopener noreferrer">
+      <a
+        className={styles.footerLink}
+        href={data.privacy.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {data.privacy.text}
-      </Enlace>
-    </Seccion>
+      </a>
+    </footer>
   );
 }
-
-const Seccion = styled.footer`
-  display: grid;
-  position: relative;
-  gap: 0.5rem;
-  justify-items: center;
-  padding: 1rem;
-`;
-
-const Copyright = styled.p``;
-
-const Enlace = styled.a`
-  color: yellow;
-  font-weight: bold;
-`;

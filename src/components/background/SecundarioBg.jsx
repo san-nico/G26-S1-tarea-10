@@ -1,7 +1,6 @@
-import styled from "@emotion/styled";
-import { theme } from "../../styles/theme";
 import { BaseBg } from "./BaseBg";
+import styles from "./background.module.css";
 
-export const SecundarioBg = styled(BaseBg)`
-  background: ${theme.background.secundario};
-`;
+export function SecundarioBg(props) {
+  return <BaseBg className={styles.secundario} {...props} />;
+}

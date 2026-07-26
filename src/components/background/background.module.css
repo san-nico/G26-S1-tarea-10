@@ -1,0 +1,40 @@
+.base {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.hero {
+  composes: base;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(29, 15, 38, 0.95),
+      transparent 10%,
+      transparent 90%,
+      rgba(29, 15, 38, 0.95)
+    ),
+    url("/assets/hero-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.primario {
+  composes: base;
+  background: rgb(29, 15, 38);
+}
+
+.secundario {
+  composes: base;
+  background: rgb(29, 26, 42);
+}
+
+.tile {
+  composes: base;
+  background-image: url("/img/fondo.png");
+  background-size: 20rem;
+  background-position: center;
+}

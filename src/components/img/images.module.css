@@ -1,0 +1,39 @@
+.circularContainer {
+  display: grid;
+  background: white;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.circularImage {
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  width: 95%;
+}
+
+.fotografia {
+  aspect-ratio: 12 / 16;
+  object-fit: cover;
+  border-radius: 5%;
+  width: 100%;
+}
+
+.heroImage {
+  height: 100%;
+  width: 100%;
+  object-position: right;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.iconoImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.small {
+  width: 4rem;
+}

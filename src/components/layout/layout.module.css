@@ -1,0 +1,60 @@
+.navSection {
+  display: grid;
+  width: 100%;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navContainer {
+  display: grid;
+  justify-self: center;
+  grid-template-areas: "img nav";
+  width: min(100%, 100rem);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navImage {
+  grid-area: img;
+  height: 4rem;
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #39ff88;
+}
+
+.footerSection {
+  display: grid;
+  position: relative;
+  gap: 0.5rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.footerLink {
+  color: yellow;
+  font-weight: bold;
+}
+
+@media (max-width: 476px) {
+  .navContainer {
+    grid-template-areas:
+      "img"
+      "nav";
+    justify-items: center;
+    justify-content: center;
+  }
+}

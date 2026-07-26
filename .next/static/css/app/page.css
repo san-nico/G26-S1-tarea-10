@@ -1,0 +1,497 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/background/background.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+.background_base___n9_c {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.background_hero__DHYTc {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(29, 15, 38, 0.95),
+      transparent 10%,
+      transparent 90%,
+      rgba(29, 15, 38, 0.95)
+    ),
+    url("/assets/hero-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.background_primario__krdDf {
+  background: rgb(29, 15, 38);
+}
+
+.background_secundario__dWwew {
+  background: rgb(29, 26, 42);
+}
+
+.background_tile__o_Ej8 {
+  background-image: url("/img/fondo.png");
+  background-size: 20rem;
+  background-position: center;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/img/images.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.images_circularContainer__Z9QsL {
+  display: grid;
+  background: white;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.images_circularImage__UBDQ4 {
+  align-self: center;
+  justify-self: center;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  width: 95%;
+}
+
+.images_fotografia__ZYooh {
+  aspect-ratio: 12 / 16;
+  object-fit: cover;
+  border-radius: 5%;
+  width: 100%;
+}
+
+.images_heroImage__4H2g1 {
+  height: 100%;
+  width: 100%;
+  object-position: right;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.images_iconoImage__RiCKT {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.images_small__zuehd {
+  width: 4rem;
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/cards/cards.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+.cards_container__VFzhq {
+  display: grid;
+  padding: 1.75rem;
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #39ff88;
+  background: rgb(29, 15, 38);
+}
+
+.cards_textos__4w_bv {
+  display: grid;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+}
+
+.cards_texto__y_Ble {
+  margin: 0;
+}
+
+.cards_card__gPppH {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 1rem;
+  gap: 1rem;
+  grid-template-areas:
+    "imagen nombre"
+    "imagen stats"
+    "imagen contactos";
+}
+
+.cards_contactos__L418K {
+  display: flex;
+  gap: 0.5rem;
+  grid-area: contactos;
+}
+
+.cards_bio__opklf {
+  display: grid;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  grid-area: stats;
+  align-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cards_cv__aXp9F {
+  margin: 0;
+}
+
+.cards_stackCard__ev1Qt {
+  display: grid;
+  transform: scale(1.5);
+  justify-self: center;
+  grid-template-areas:
+    "imagen titulo"
+    "imagen descripcion";
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.cards_stackTitle__IVSkx {
+  grid-area: titulo;
+  align-self: end;
+  color: #39ff88;
+}
+
+.cards_stackImageWrapper__6OKXu {
+  grid-area: imagen;
+}
+
+.cards_stackDescription__uZRiy {
+  grid-area: descripcion;
+}
+
+.cards_imagenWrapper__eZG1E {
+  width: 16rem;
+  grid-area: imagen;
+}
+
+@media (max-width: 480px) {
+  .cards_card__gPppH {
+    justify-self: center;
+    grid-template-areas:
+      "imagen"
+      "nombre"
+      "stats"
+      "contactos";
+    grid-template-columns: min-content;
+  }
+
+  .cards_card__gPppH > * {
+    justify-self: center;
+  }
+
+  .cards_contactos__L418K {
+    grid-area: imagen;
+    justify-self: end;
+    align-self: end;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/ui/ui.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+.ui_divider__RNns7 {
+  height: 2px;
+  background: linear-gradient(90deg, black, gray, black);
+}
+
+.ui_dot__RdzVd {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.ui_dotActive__j7sgm {
+  background: #39ff88;
+}
+
+.ui_titleCard__xBvlQ {
+  color: #39ff88;
+}
+
+.ui_titleSection__aITBK {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/shared/shared.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.shared_container__WGJT1 {
+  display: grid;
+  position: relative;
+  padding: 4rem 1rem;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/sections/sections.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.sections_limitador__o5ocC {
+  display: grid;
+  justify-self: center;
+  justify-content: space-between;
+  grid-gap: 2rem;
+  gap: 2rem;
+  grid-template-columns: auto auto;
+  width: min(100%, 1200px);
+}
+
+.sections_info__mG4Mm {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: rgb(29, 15, 38);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.sections_ctaBase__LjRjd {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+}
+
+.sections_fila__w4yyE {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sections_year__DYjkP {
+  background: #8b5cf6;
+}
+
+.sections_tags__yMJMX {
+  display: grid;
+  list-style-type: circle;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.sections_tag__OWcQX {
+  font-style: italic;
+}
+
+.sections_cta__vTGIi {
+  background: rgba(255, 0, 0, 0.67);
+}
+
+.sections_imagenWrapper__fgQHA {
+  display: block;
+}
+
+.sections_fotografiaWrapper__fOJj3 {
+  width: 3rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.sections_stackWrapper__3z90g {
+  width: 3rem;
+}
+
+.sections_holder__kc25s {
+  width: min(100%, 100rem);
+  justify-content: center;
+  display: grid;
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  justify-self: center;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem));
+}
+
+.sections_relatoresHolder__AUV0e {
+  display: grid;
+  width: min(100%, 100rem);
+  margin: 0 auto;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
+  grid-gap: 1.5rem;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 0.5rem;
+}
+
+.sections_formContainer__Y7BZh {
+  display: grid;
+  border: 0.1rem solid #39ff88;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  grid-gap: 2rem;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  background: rgb(29, 15, 38);
+  justify-items: center;
+  justify-self: center;
+}
+
+.sections_campo__cl3Ex {
+  display: grid;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+}
+
+.sections_etiqueta__mStqa {
+  margin-left: 0.5rem;
+}
+
+.sections_ingreso__SMO9Q {
+  color: black;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  background: #39ff88;
+}
+
+.sections_boton__d7bFz {
+  width: 100%;
+  grid-column: 1 / -1;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #7028dc, #b0d627);
+}
+
+.sections_stackHolder__UjHZi {
+  display: grid;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.sections_stackCardWrapper__TBDmM {
+  display: grid;
+  grid-row: 1;
+  grid-column: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.sections_stackCardWrapperHidden__9u9mL {
+  opacity: 0;
+}
+
+.sections_dots__hz13M {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 830px) {
+  .sections_limitador__o5ocC {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .sections_imagenWrapper__fgQHA {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .sections_formContainer__Y7BZh {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 770px) {
+  .sections_stackCardWrapper__TBDmM {
+    justify-items: center;
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[10].use[3]!./src/reset.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: inherit;
+  list-style-position: inside;
+  z-index: 1;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./src/components/layout/layout.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+.layout_navSection__tMqMR {
+  display: grid;
+  width: 100%;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.layout_navContainer__jGh1F {
+  display: grid;
+  justify-self: center;
+  grid-template-areas: "img nav";
+  width: min(100%, 100rem);
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.layout_navImage__9Jlpg {
+  grid-area: img;
+  height: 4rem;
+}
+
+.layout_nav__eQLt7 {
+  grid-area: nav;
+  display: flex;
+  gap: 1rem;
+}
+
+.layout_nav__eQLt7 a {
+  color: white;
+  text-decoration: none;
+}
+
+.layout_nav__eQLt7 a:hover {
+  color: #39ff88;
+}
+
+.layout_footerSection__T9bKm {
+  display: grid;
+  position: relative;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.layout_footerLink__2AgP8 {
+  color: yellow;
+  font-weight: bold;
+}
+
+@media (max-width: 476px) {
+  .layout_navContainer__jGh1F {
+    grid-template-areas:
+      "img"
+      "nav";
+    justify-items: center;
+    justify-content: center;
+  }
+}
+

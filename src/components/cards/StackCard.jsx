@@ -1,52 +1,14 @@
-/** @jsxImportSource @emotion/react */
-import styled from "@emotion/styled";
-import { theme } from "../../styles/theme";
 import { CircularImg } from "../img/CircularImg";
+import styles from "./cards.module.css";
 
 export function StackCard({ name, image, description }) {
   return (
-    <Card>
-      <Titulo>{name}</Titulo>
-      <ImageWrapper>
+    <div className={styles.stackCard}>
+      <h1 className={styles.stackTitle}>{name}</h1>
+      <div className={styles.stackImageWrapper}>
         <CircularImg src={`img/${image}`} />
-      </ImageWrapper>
-      <Descripcion>{description}</Descripcion>
-    </Card>
+      </div>
+      <p className={styles.stackDescription}>{description}</p>
+    </div>
   );
 }
-const ImageWrapper = styled.div`
-  grid-area: imagen;
-`;
-const Card = styled.div`
-  display: grid;
-  transform: scale(1.5);
-  justify-self: center;
-  grid-template-areas:
-    "imagen titulo"
-    "imagen descripcion";
-  grid-template-columns: auto auto;
-  gap: 1rem;
-
-  padding: ${theme.padding.seccion};
-
-  @media (max-width: 770px) {
-    grid-template-areas:
-      "imagen"
-      "titulo"
-      "descripcion";
-    justify-items: center !important;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    transform: scale(1);
-  }
-`;
-
-const Titulo = styled.h1`
-  grid-area: titulo;
-  align-self: end;
-  color: ${theme.colors.primario};
-`;
-
-const Descripcion = styled.p`
-  grid-area: descripcion;
-`;

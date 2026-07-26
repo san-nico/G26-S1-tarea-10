@@ -1,13 +1,9 @@
-import styled from "@emotion/styled";
-import { TituloSeccion } from "../ui/TituloSeccion";
-import { theme } from "../../styles/theme";
+import styles from "./shared.module.css";
 
 export default function Seccion({ id, children }) {
-  return <Container id={id}>{children}</Container>;
+  return (
+    <section className={styles.container} id={id}>
+      {children}
+    </section>
+  );
 }
-
-const Container = styled.section`
-  display: grid;
-  position: relative;
-  padding: 4rem 1rem;
-`;

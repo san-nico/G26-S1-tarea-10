@@ -1,9 +1,5 @@
-import styled from "@emotion/styled";
+import styles from "./images.module.css";
 
-export const FotografiaImg = styled.img`
-  aspect-ratio: 12/16;
-  object-fit: cover;
-  border-radius: 5%;
-
-  width: 100%;
-`;
+export function FotografiaImg(props) {
+  return <img className={styles.fotografia} {...props} />;
+}

@@ -1,35 +1,20 @@
-import styled from "@emotion/styled";
-import { theme } from "../../styles/theme";
 import { TituloCard } from "../ui/TituloCard";
 import { SmallImg } from "../img/SmallImg";
+import styles from "./cards.module.css";
 
 export function PilarCard({ title, image, text = [] }) {
   return (
-    <Contenedor>
+    <article className={styles.container}>
       <TituloCard>{title}</TituloCard>
       <SmallImg src={`img/${image}`} alt={title} />
 
-      <Textos>
+      <div className={styles.textos}>
         {text.map((linea, index) => (
-          <Texto key={index}>{linea}</Texto>
+          <p className={styles.texto} key={index}>
+            {linea}
+          </p>
         ))}
-      </Textos>
-    </Contenedor>
+      </div>
+    </article>
   );
 }
-
-const Contenedor = styled.article`
-  display: grid;
-  padding: ${theme.spacing(7)};
-  gap: ${theme.spacing(6)};
-  border-radius: ${theme.spacing(2)};
-  border: 1px solid ${theme.colors.primario};
-  background: ${theme.background.primario};
-`;
-//HOJAS
-
-const Textos = styled.div`
-  display: grid;
-  gap: ${theme.spacing(2)};
-`;
-const Texto = styled.p``;

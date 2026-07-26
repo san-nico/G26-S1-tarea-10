@@ -1,0 +1,5 @@
+.container {
+  display: grid;
+  position: relative;
+  padding: 4rem 1rem;
+}

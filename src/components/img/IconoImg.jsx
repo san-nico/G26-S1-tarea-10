@@ -1,16 +1,9 @@
-import styled from "@emotion/styled";
+import styles from "./images.module.css";
 
 export function IconoImg({ src, href }) {
   return (
-    <Enlace href={href} target="_blank">
-      <Imagen src={src}></Imagen>
-    </Enlace>
+    <a href={href} target="_blank" rel="noreferrer">
+      <img className={styles.iconoImage} src={src} alt="icono" />
+    </a>
   );
 }
-const Enlace = styled.a``;
-
-const Imagen = styled.img`
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.3rem;
-`;

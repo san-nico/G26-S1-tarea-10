@@ -1,6 +1,5 @@
-import styled from "@emotion/styled";
+import styles from "./ui.module.css";
 
-export const TituloSeccion = styled.h2`
-  text-align: center;
-  margin-bottom: 2rem;
-`;
+export function TituloSeccion({ children }) {
+  return <h2 className={styles.titleSection}>{children}</h2>;
+}

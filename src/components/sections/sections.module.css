@@ -1,0 +1,172 @@
+.limitador {
+  display: grid;
+  justify-self: center;
+  justify-content: space-between;
+  gap: 2rem;
+  grid-template-columns: auto auto;
+  width: min(100%, 1200px);
+}
+
+.info {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: rgb(29, 15, 38);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.ctaBase {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  font-weight: bold;
+}
+
+.fila {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.year {
+  composes: ctaBase;
+  background: #8b5cf6;
+}
+
+.tags {
+  display: grid;
+  list-style-type: circle;
+  gap: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.tag {
+  font-style: italic;
+}
+
+.cta {
+  composes: ctaBase;
+  background: rgba(255, 0, 0, 0.67);
+}
+
+.imagenWrapper {
+  display: block;
+}
+
+.fotografiaWrapper {
+  width: 3rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.stackWrapper {
+  width: 3rem;
+}
+
+.holder {
+  width: min(100%, 100rem);
+  justify-content: center;
+  display: grid;
+  gap: 1.5rem;
+  justify-self: center;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem));
+}
+
+.relatoresHolder {
+  display: grid;
+  width: min(100%, 100rem);
+  margin: 0 auto;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
+  gap: 1.5rem;
+  align-items: stretch;
+  padding: 0.5rem;
+}
+
+.formContainer {
+  display: grid;
+  border: 0.1rem solid #39ff88;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  background: rgb(29, 15, 38);
+  justify-items: center;
+  justify-self: center;
+}
+
+.campo {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.etiqueta {
+  margin-left: 0.5rem;
+}
+
+.ingreso {
+  color: black;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  background: #39ff88;
+}
+
+.boton {
+  width: 100%;
+  grid-column: 1 / -1;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #7028dc, #b0d627);
+}
+
+.stackHolder {
+  display: grid;
+  gap: 1rem;
+}
+
+.stackCardWrapper {
+  display: grid;
+  grid-row: 1;
+  grid-column: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.stackCardWrapperHidden {
+  opacity: 0;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 830px) {
+  .limitador {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .imagenWrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .formContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 770px) {
+  .stackCardWrapper {
+    justify-items: center;
+  }
+}

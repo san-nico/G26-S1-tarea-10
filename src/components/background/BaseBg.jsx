@@ -1,8 +1,5 @@
-import styled from "@emotion/styled";
+import styles from "./background.module.css";
 
-export const BaseBg = styled.div`
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  height: 100%;
-`;
+export function BaseBg({ className = "", ...props }) {
+  return <div className={`${styles.base} ${className}`.trim()} {...props} />;
+}

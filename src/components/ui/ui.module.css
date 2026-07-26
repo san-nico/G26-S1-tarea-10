@@ -1,0 +1,25 @@
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, black, gray, black);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  background: #39ff88;
+}
+
+.titleCard {
+  color: #39ff88;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 2rem;
+}
