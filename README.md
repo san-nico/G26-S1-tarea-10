@@ -1,11 +1,11 @@
 # Taller Frontend 2026
 
 Landing page de prueba del **Taller Frontend 2026**, desarrollado con **Next.js**.  
-Presenta información del curso en cuestión, tecnologías utilizadas, pilares del taller y equipo de relatores.
+Presenta información del curso en, tecnologías utilizadas, pilares del taller y equipo de relatores.
 
 ## Demo
 
-🌐 https://san-nico.github.io/G26-S1-tarea-10/
+🌐 https://g26-s1-tarea-10-otbgks8gd-sannico.vercel.app
 
 ## Tecnologías
 
