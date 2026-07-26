@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# Next.js build output
+.next/
+
 # Build outputs
 dist/
 build/
@@ -23,10 +26,10 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# VSCode settings (opcional)
+# VSCode settings
 .vscode/
 
-# Coverage (tests)
+# Coverage
 coverage/
 
 # Vite cache / misc
@@ -38,10 +41,10 @@ coverage/
 # TypeScript
 *.tsbuildinfo
 
-# Optional: local testing
+# Deployment
 .vercel/
 .netlify/
 
 # Temporary files
 *.tmp
-*.swp
+*.swp.next/
